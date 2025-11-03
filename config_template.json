@@ -1,0 +1,19 @@
+{
+  "betfair": {
+    "username": "YOUR_BETFAIR_USERNAME",
+    "password": "YOUR_BETFAIR_PASSWORD",
+    "app_key": "YOUR_BETFAIR_APP_KEY",
+    "certs_path": "PATH_TO_YOUR_CERTIFICATES_FOLDER"
+  },
+  "notes": {
+    "setup_instructions": [
+      "1. Copy this file to 'config.json' (do not commit config.json)",
+      "2. Replace YOUR_BETFAIR_USERNAME with your actual Betfair username",
+      "3. Replace YOUR_BETFAIR_PASSWORD with your actual Betfair password",
+      "4. Replace YOUR_BETFAIR_APP_KEY with your Betfair API app key",
+      "5. Replace PATH_TO_YOUR_CERTIFICATES_FOLDER with the path to your SSL certificates folder",
+      "6. Get your API key from: https://www.betfair.com.au/hub/tools/betting-tools/how-to-setup-your-betfair-api-key/",
+      "7. Generate certificates following: https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Certificate+Generation+With+XCA"
+    ]
+  }
+}
