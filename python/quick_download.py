@@ -24,12 +24,22 @@ def load_config():
 def main():
     # Load config and connect
     config = load_config()
-    trading = betfairlightweight.APIClient(
-        username=config['username'],
-        password=config['password'],
-        app_key=config['app_key'],
-        certs=config['certs_path']
-    )
+
+    # Create API client - use certs if available, otherwise use interactive login
+    if config['certs_path']:
+        trading = betfairlightweight.APIClient(
+            username=config['username'],
+            password=config['password'],
+            app_key=config['app_key'],
+            certs=config['certs_path']
+        )
+    else:
+        # Interactive login without certificates
+        trading = betfairlightweight.APIClient(
+            username=config['username'],
+            password=config['password'],
+            app_key=config['app_key']
+        )
 
     trading.login()
     print("✓ Connected to Betfair API")
